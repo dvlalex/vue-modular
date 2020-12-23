@@ -9,6 +9,15 @@ module.exports = {
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        semi: false,
+        printWidth: 100,
+        trailingComma: "none",
+        arrowParens: "avoid"
+      }
+    ]
   }
 };
